@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  @apply bg-gradient-to-br from-blue-50 to-indigo-100;
+}
+
+main {
+  @apply w-full max-w-6xl mx-auto p-4;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px; 
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px; 
+  border: 2px solid transparent;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.btn:hover {
+  @apply transform scale-105;
+}
+
+.card-hover {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.card-hover:hover {
+  @apply transform shadow-xl;
+  transform: translateY(-8px);
+}
+
+input:focus, 
+textarea:focus, 
+button:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* .modal {
+  @apply backdrop-blur-sm;
+} */
+
+.modal-box {
+  @apply border-0 shadow-2xl;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translate(-50%, -60%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
