@@ -6,7 +6,7 @@ Node Js 22+ recommended
 Clone the repository to your machine
 
 ```
-git clone https://
+https://github.com/mSaroarDev/Review-Dibo-Home-Task
 ```
 
 Now install node modules
